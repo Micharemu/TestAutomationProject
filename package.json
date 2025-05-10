@@ -1,0 +1,12 @@
+{
+  "name": "test-automation",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "playwright test",
+    "api-test": "node api/tests/api_automation.js"
+  },
+  "dependencies": {
+    "postman": "^9",
+    "@playwright/test": "^1.43.1"
+  }
+}

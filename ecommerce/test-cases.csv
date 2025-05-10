@@ -1,0 +1,6 @@
+Test Case ID,Description,Steps,Expected Result
+EC001,Add item to cart,"Search item > Click 'Add to Cart'","Item appears in cart"
+EC002,Complete purchase with valid payment,"Proceed to checkout > Pay","Order placed successfully"
+EC003,Apply invalid coupon code,"Enter code > Click apply","'Invalid coupon' message"
+EC004,Track order after purchase,"Login > View orders > Track","Tracking details displayed"
+EC005,Cancel pending order,"Go to order > Click 'Cancel'","Status changes to 'Cancelled'"

@@ -1,0 +1,6 @@
+Test Case ID,Endpoint,Method,Input,Expected Status,Expected Response
+API001,/login,POST,Valid credentials,200 OK,Token in response
+API002,/products,GET,None,200 OK,List of products
+API003,/orders,POST,Invalid token,401 Unauthorized,Error message
+API004,/cart/{id},DELETE,Valid ID,204 No Content,Cart item removed
+API005,/users/{id},GET,User ID,200 OK,User details returned

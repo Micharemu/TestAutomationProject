@@ -1,0 +1,6 @@
+Test Case ID,Description,Steps,Expected Result
+HC001,Verify claim submission with valid data,"Login > Fill claim form > Submit","Claim is accepted and status is 'Submitted'"
+HC002,Reject claim with missing mandatory fields,"Leave required fields blank > Submit","Error message displayed, claim not submitted"
+HC003,Check claim rejection for expired insurance,"Submit claim with expired policy date","Claim status is 'Rejected' with reason"
+HC004,Validate EOB generation,"Submit a successful claim","EOB is generated and downloadable"
+HC005,Verify claim resubmission after rejection,"Fix rejection reason > Resubmit","Status changes to 'Resubmitted'"
