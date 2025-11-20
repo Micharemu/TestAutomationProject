@@ -1,63 +1,42 @@
-📦 TestAutomationProject
-End-to-End UI & API Test Automation Suite (Cypress • Playwright • Postman • Newman • GitHub Actions)
+# TestAutomationProject
 
-This repository showcases a complete quality assurance testing framework, combining:
+End-to-end **QA automation and API testing project** combining UI tests and API validation for a sample web application (e-commerce style flows).
 
-UI Automation (Cypress + Playwright)
+This project reflects my hands-on experience in **manual testing, UI automation (Cypress/Playwright)**, and **API testing (Postman/Newman)** as described in my CV and QA portfolio.
 
-API Testing (Postman + Newman)
+---
 
-Manual Test Artifacts (test cases, bug reports, test plans)
+## 🎯 Objectives
 
-CI/CD Automation (GitHub Actions)
+- Practice real-world **e-commerce style flows** (login, product browsing, cart, checkout).
+- Design and execute **manual test cases** and convert key flows into automation.
+- Build a **REST API testing collection** in Postman and run it via Newman + CI.
+- Showcase how I design, automate, and structure tests for interviews and portfolio.
 
-It reflects my hands-on QA experience across manual testing, functional/UI automation, and REST API testing—as described in my resume and QA portfolio.
+---
 
-🚀 Key Features
+## 🧰 Tech Stack
 
-✔ Real-world e-commerce flow automation
-✔ Cypress UI testing (login, products, cart, checkout)
-✔ Postman & Newman API testing pipeline
-✔ Playwright optional cross-browser demo
-✔ GitHub Actions CI pipeline
-✔ Clean testing structure following industry standards
+**Automation & Testing:**
 
-🎯 Project Objectives
+- Cypress (UI tests)
+- Playwright (optional/extended UI demo)
+- Postman + Newman (API tests)
+- JavaScript (Mocha / Chai style assertions)
 
-Automate common e-commerce scenarios: login, add to cart, checkout
+**CI/CD & Utilities:**
 
-Demonstrate strong QA fundamentals: planning, execution, reporting
+- Git & GitHub
+- GitHub Actions (CI)
+- Node.js / npm
 
-Convert manual test cases to automated scripts
+---
 
-Validate API endpoints using Postman + Newman
+## 📂 Project Structure
 
-Enable CI/CD pipelines for automation workflows
+Example structure (your folders/files may vary slightly):
 
-Provide a complete QA portfolio project for review
-
-🧰 Tech Stack
-Automation Tools
-
-Cypress – UI automation (primary)
-
-Playwright – UI automation (optional extension)
-
-Postman – API test design
-
-Newman – API CLI runner
-
-JavaScript (Mocha / Chai) – test assertions
-
-Infrastructure & Version Control
-
-Git & GitHub
-
-GitHub Actions (CI)
-
-Node.js / npm
-
-📁 Project Structure
+```text
 TestAutomationProject/
 ├─ cypress/
 │  ├─ e2e/
@@ -76,128 +55,88 @@ TestAutomationProject/
 │     └─ ci-tests.yml
 ├─ package.json
 └─ README.md
+cypress/e2e/ – UI test specs for core user journeys.
 
-Folder Breakdown
+postman/ – Postman collection + environment for REST API testing.
 
-📌 cypress/e2e/ → UI automation test scripts
-📌 postman/ → Postman API test collection & environment
-📌 .github/workflows/ → CI pipelines
-📌 package.json → Scripts for Cypress & Newman
+.github/workflows/ – GitHub Actions workflow for CI test runs.
 
-🧪 Test Coverage Summary
-🔵 UI (Cypress)
+package.json – npm scripts for running Cypress and Newman.
 
-Automated flows include:
+✅ Test Coverage
+UI / End-to-End (Cypress)
+Key flows covered:
 
-Login / logout
+User authentication (login / logout)
 
-Product listing & filtering
+Product listing, filtering, and searching
 
-Add/remove items from cart
+Add to cart / remove from cart
 
-Checkout flow
+Checkout flow (address, summary, confirmation)
 
-Validation of fields & error messages
+Basic validation (required fields, error messages, etc.)
 
-🟠 API (Postman + Newman)
+API (Postman + Newman)
+Key endpoints:
 
-Covered endpoints:
+Authentication (login)
 
-Authentication
+Products (list / details)
 
-Product listing & product details
+Cart / orders
 
-Cart & order submission
+Error / negative test cases (invalid payloads, wrong tokens, etc.)
 
-Negative/error scenarios
-
-🛠️ Setup & Installation
-1️⃣ Clone the repository
+🚀 How to Run Locally
+1. Clone the Repository
+bash
+Copy code
 git clone https://github.com/Micharemu/TestAutomationProject.git
 cd TestAutomationProject
-
-2️⃣ Install dependencies
+2. Install Dependencies
+bash
+Copy code
 npm install
+Make sure you have Node.js and npm installed.
 
-🌐 Run UI Tests (Cypress)
-Open interactive UI mode:
+3. Run Cypress Tests (UI)
+bash
+Copy code
+# Open Cypress Test Runner
 npm run cypress:open
 
-Run all tests in headless mode:
+# OR run all tests in headless mode
 npm run cypress:run
+(Adjust the commands according to your package.json scripts.)
 
-🔗 Run API Tests (Postman + Newman)
-Basic run:
+4. Run API Tests (Postman + Newman)
+bash
+Copy code
+# Example Newman run
 npx newman run postman/ecommerce-api-collection.json \
   -e postman/ecommerce-api-environment.json
+You can add a script in package.json like:
 
-Using package.json script:
-
-Add this:
-
+json
+Copy code
 "scripts": {
   "api:test": "newman run postman/ecommerce-api-collection.json -e postman/ecommerce-api-environment.json"
 }
+Then simply run:
 
-
-Then run:
-
+bash
+Copy code
 npm run api:test
+🔁 CI / GitHub Actions
+A sample GitHub Actions workflow (.github/workflows/ci-tests.yml) can:
 
-⚙️ Continuous Integration (GitHub Actions)
+Install Node dependencies
 
-The CI workflow (ci-tests.yml) performs:
-
-Install dependencies
-
-Run Cypress tests (headless)
+Run Cypress UI tests in headless mode
 
 Run Newman API tests
 
-Optionally upload HTML reports
+Optionally upload artifacts or reports
 
-You can add a CI badge:
-
-![CI Status](https://github.com/Micharemu/TestAutomationProject/actions/workflows/ci-tests.yml/badge.svg)
-
-📘 Manual Test Artifacts Included
-
-Test Plan
-
-Test Scenarios
-
-Manual Test Cases
-
-Regression Test Suites
-
-Bug Reports
-
-Test Execution Results
-
-🏆 Skills Demonstrated in This Project
-
-✔ UI & API automation
-✔ Negative & edge-case testing
-✔ Test planning & documentation
-✔ CI/CD integration
-✔ Git branching & version control
-✔ Clean folder structure & maintainability
-✔ Industry-level QA best practices
-
-📣 About This Project
-
-This repository is part of my professional QA Engineering Portfolio.
-It demonstrates my ability to combine:
-
-Manual + Automated testing
-
-API + UI automation
-
-CI/CD integration
-
-Strong documentation practices
-
-Real-world testing workflows
-
-If you're reviewing this as a recruiter or hiring manager, welcome!
-Feel free to explore the repository or contact me.
+This reflects how I integrate automation into a CI/CD pipeline in real projects.
