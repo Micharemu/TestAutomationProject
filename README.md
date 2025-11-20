@@ -89,26 +89,23 @@ Cart / orders
 Error / negative test cases (invalid payloads, wrong tokens, etc.)
 
 🚀 How to Run Locally
-1. Clone the Repository
 
+1. Clone the Repository
 git clone https://github.com/Micharemu/TestAutomationProject.git
 cd TestAutomationProject
-2. Install Dependencies
 
+2. Install Dependencies
 npm install
 Make sure you have Node.js and npm installed.
 
 3. Run Cypress Tests (UI)
-
 # Open Cypress Test Runner
 npm run cypress:open
-
 # OR run all tests in headless mode
 npm run cypress:run
 (Adjust the commands according to your package.json scripts.)
 
 4. Run API Tests (Postman + Newman)
-
 # Example Newman run
 npx newman run postman/ecommerce-api-collection.json \
   -e postman/ecommerce-api-environment.json
