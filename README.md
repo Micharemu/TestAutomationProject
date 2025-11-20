@@ -90,19 +90,16 @@ Error / negative test cases (invalid payloads, wrong tokens, etc.)
 
 🚀 How to Run Locally
 1. Clone the Repository
-bash
-Copy code
+
 git clone https://github.com/Micharemu/TestAutomationProject.git
 cd TestAutomationProject
 2. Install Dependencies
-bash
-Copy code
+
 npm install
 Make sure you have Node.js and npm installed.
 
 3. Run Cypress Tests (UI)
-bash
-Copy code
+
 # Open Cypress Test Runner
 npm run cypress:open
 
@@ -111,22 +108,19 @@ npm run cypress:run
 (Adjust the commands according to your package.json scripts.)
 
 4. Run API Tests (Postman + Newman)
-bash
-Copy code
+
 # Example Newman run
 npx newman run postman/ecommerce-api-collection.json \
   -e postman/ecommerce-api-environment.json
 You can add a script in package.json like:
 
-json
-Copy code
+
 "scripts": {
   "api:test": "newman run postman/ecommerce-api-collection.json -e postman/ecommerce-api-environment.json"
 }
 Then simply run:
 
-bash
-Copy code
+
 npm run api:test
 🔁 CI / GitHub Actions
 A sample GitHub Actions workflow (.github/workflows/ci-tests.yml) can:
